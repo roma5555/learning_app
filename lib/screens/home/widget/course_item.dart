@@ -27,7 +27,7 @@ class CourseItem extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
 
               children: [
-                Image.asset(course.thumbnailUrl),
+                Flexible(child: Image.asset(course.thumbnailUrl)),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 5.0),
                   child: Column(

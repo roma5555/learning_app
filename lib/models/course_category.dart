@@ -1,4 +1,4 @@
-enum CourseCategory { all, programming, finance, marketing, other }
+enum CourseCategory { all, programming, finance, marketing,WebDevelopment, other }
 
 extension CourseCategoryExtension on CourseCategory {
   String get title {
@@ -12,6 +12,9 @@ extension CourseCategoryExtension on CourseCategory {
         return "Finance";
       case CourseCategory.marketing:
         return "Marketing";
+      case CourseCategory.WebDevelopment:
+        return "Web Development";
+
       case CourseCategory.other:
         return "Other";
     }

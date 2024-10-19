@@ -72,4 +72,48 @@ class Course {
   int get lessonNo => _lessonNo;
 
   List<Section> get sections => _sections;
+
+  // Method to convert a Course object to a Map for Firebase Firestore
+  Map<String, dynamic> toMap() {
+    return {
+      '_id': id,
+      '_title': title,
+      '_thumbnailUrl': thumbnailUrl,
+      '_description': description,
+      '_createdBy': createdBy,
+      '_createdDate': createdDate,
+      '_rate': rate,
+      '_isFavorite': isFavorite,
+      '_price': price,
+      '_courseCategory': courseCategory.name, // Store category as string
+      '_duration': duration,
+      '_lessonNo': lessonNo,
+      '_sections': sections.map((section) => section.toMap()).toList(), // Convert sections to map
+    };
+  }
+
+
+  // Factory to convert Map to Course object
+  factory Course.fromMap(Map<String, dynamic> map) {
+    return Course(
+      map['_id'] as String,
+      map['_title'] as String,
+      map['_thumbnailUrl'] as String,
+      map['_description'] as String,
+      map['_createdBy'] as String,
+      map['_createdDate'] as String,
+      map['_rate'] as double,
+      map['_isFavorite'] as bool,
+      CourseCategory.values.firstWhere(
+            (e) => e.name == map['_courseCategory'],
+        orElse: () => CourseCategory.other, // Default value if no match
+      ),      map['_price'] as double,
+      map['_duration'] as String,
+      map['_lessonNo'] as int,
+      (map['_sections'] as List).map((item) => Section.fromMap(item)).toList(),
+    );
+  }
+
+
+
 }

@@ -1,9 +1,6 @@
 import 'package:e_learning_app/argument/checkout_argument.dart';
 import 'package:e_learning_app/argument/course_argument.dart';
-import 'package:e_learning_app/layout/layout_screen.dart';
-import 'package:e_learning_app/modules/cubit/cubit.dart';
-import 'package:e_learning_app/modules/cubit/states.dart';
-import 'package:e_learning_app/modules/login/login_screen.dart';
+
 import 'package:e_learning_app/screens/courses/my_courses_list.dart';
 import 'package:e_learning_app/screens/courses/whishlist_screen.dart';
 import 'package:e_learning_app/screens/details/course_details.dart';
@@ -12,6 +9,7 @@ import 'package:e_learning_app/screens/intro/intro_screen.dart';
 import 'package:e_learning_app/screens/shopping/checkout_screen.dart';
 import 'package:e_learning_app/screens/shopping/shopping_cart_screen.dart';
 import 'package:e_learning_app/shared/components/constants.dart';
+import 'package:e_learning_app/util/firestore_service.dart';
 import 'package:e_learning_app/util/route_names.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -22,6 +20,9 @@ void main() async{
   // Ensure that bindings are initialized
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
+  // final FirestoreService _firestoreService = FirestoreService();
+  // await _firestoreService.uploadCourses();
+
   //// await CacheHelper.init();
   //// Widget startWidget;
   //bool onBoarding = CacheHelper.getData(key: 'onBoarding');

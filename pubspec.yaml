@@ -75,6 +75,7 @@ flutter:
     - assets/images/intro/
     - assets/images/offers/
     - assets/images/course/
+    - assets/courses.json
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
