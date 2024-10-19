@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id">YOUR_WEB_CLIENT_ID</string>
+    <string name="google_api_key">AIzaSyAMQcqQ6d7fRMwgoSqb4HDZadHCZGgLSrY</string>
+    <string name="google_app_id">1:915006759357:android:8d2a9f749976641ab232d4</string>
+    <string name="firebase_database_url">>https://learning-app-311ea.firebaseio.com/</string>
+    <string name="ga_trackingId">YOUR_TRACKING_ID</string>
+    <string name="gcm_defaultSenderId">915006759357</string>
+    <string name="project_id">learning-app-311ea</string>
+</resources>
