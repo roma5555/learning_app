@@ -2,6 +2,7 @@ import 'package:e_learning_app/models/course.dart';
 import 'package:e_learning_app/models/course_category.dart';
 import 'package:e_learning_app/models/lecture.dart';
 import 'package:e_learning_app/models/section.dart';
+import 'package:e_learning_app/models/lectureVideo.dart';
 
 class CourseDataProvider {
   //Here I have already created courses & section list which we will we using hence forth
@@ -9,42 +10,43 @@ class CourseDataProvider {
   //Section List
   static List<Section> sectionList = [
     Section("Introduction", [
-      Lecture("Introduction", "01:48 mins"),
-      Lecture("What is Flutter", "05:54 mins"),
-      Lecture("Understanding Flutter Architecture", "04:45 mins"),
-      Lecture("Flutter Alternatives", "06:10 mins"),
+      Lecture("Introduction", "01:48 mins","https://mazwai.com/videvo_files/video/free/2016-04/small_watermarked/the_valley-graham_uheslki_preview.webm"),
+      Lecture("What is Flutter", "05:54 mins","https://mazwai.com/videvo_files/video/free/2016-04/small_watermarked/the_valley-graham_uheslki_preview.webm"),
+      Lecture("Understanding Flutter Architecture", "04:45 mins","https://mazwai.com/videvo_files/video/free/2016-04/small_watermarked/the_valley-graham_uheslki_preview.webm"),
+      Lecture("Flutter Alternatives", "06:10 mins","https://mazwai.com/videvo_files/video/free/2016-04/small_watermarked/the_valley-graham_uheslki_preview.webm"),
     ]),
     Section("Flutter Basics", [
-      Lecture("Module Introduction", "02:25 mins"),
-      Lecture("Creating New Project", "05:17 mins"),
-      Lecture("Dart Basics", "17:20 mins"),
-      Lecture("Dart Fundamentals", "11:10 mins"),
-      Lecture("Flutter App Basic", "07:40 mins"),
+      Lecture("Module Introduction", "02:25 mins","https://mazwai.com/videvo_files/video/free/2016-04/small_watermarked/the_valley-graham_uheslki_preview.webm"),
+      Lecture("Creating New Project", "05:17 mins","https://mazwai.com/videvo_files/video/free/2016-04/small_watermarked/the_valley-graham_uheslki_preview.webm"),
+      Lecture("Dart Basics", "17:20 mins","https://mazwai.com/videvo_files/video/free/2016-04/small_watermarked/the_valley-graham_uheslki_preview.webm"),
+      Lecture("Dart Fundamentals", "11:10 mins","https://mazwai.com/videvo_files/video/free/2016-04/small_watermarked/the_valley-graham_uheslki_preview.webm"),
+      Lecture("Flutter App Basic", "07:40 mins","https://mazwai.com/videvo_files/video/free/2016-04/small_watermarked/the_valley-graham_uheslki_preview.webm"),
     ]),
     Section("Layouts", [
-      Lecture("Module Introduction", "02:25 mins"),
-      Lecture("Creating New Project", "05:17 mins"),
-      Lecture("Flutter App Basic", "07:40 mins"),
+      Lecture("Module Introduction", "02:25 mins","https://mazwai.com/videvo_files/video/free/2016-04/small_watermarked/the_valley-graham_uheslki_preview.webm"),
+      Lecture("Creating New Project", "05:17 mins","https://mazwai.com/videvo_files/video/free/2016-04/small_watermarked/the_valley-graham_uheslki_preview.webm"),
+      Lecture("Flutter App Basic", "07:40 mins","https://mazwai.com/videvo_files/video/free/2016-04/small_watermarked/the_valley-graham_uheslki_preview.webm"),
     ]),
     Section("Responsive & Adaptive UI", [
-      Lecture("Module Introduction", "02:25 mins"),
-      Lecture("Dart Basics", "17:20 mins"),
-      Lecture("Dart Fundamentals", "11:10 mins"),
-      Lecture("Flutter App Basic", "07:40 mins"),
+      Lecture("Module Introduction", "02:25 mins","https://mazwai.com/videvo_files/video/free/2016-04/small_watermarked/the_valley-graham_uheslki_preview.webm"),
+      Lecture("Dart Basics", "17:20 mins","https://mazwai.com/videvo_files/video/free/2016-04/small_watermarked/the_valley-graham_uheslki_preview.webm"),
+      Lecture("Dart Fundamentals", "11:10 mins","https://mazwai.com/videvo_files/video/free/2016-04/small_watermarked/the_valley-graham_uheslki_preview.webm"),
+      Lecture("Flutter App Basic", "07:40 mins","https://mazwai.com/videvo_files/video/free/2016-04/small_watermarked/the_valley-graham_uheslki_preview.webm"),
     ]),
     Section("Builing Real App", [
-      Lecture("Module Introduction", "02:25 mins"),
-      Lecture("Creating New Project", "05:17 mins"),
-      Lecture("Flutter App Basic", "07:40 mins"),
+      Lecture("Module Introduction", "02:25 mins","https://mazwai.com/videvo_files/video/free/2016-04/small_watermarked/the_valley-graham_uheslki_preview.webm"),
+      Lecture("Creating New Project", "05:17 mins","https://mazwai.com/videvo_files/video/free/2016-04/small_watermarked/the_valley-graham_uheslki_preview.webm"),
+      Lecture("Flutter App Basic", "07:40 mins","https://mazwai.com/videvo_files/video/free/2016-04/small_watermarked/the_valley-graham_uheslki_preview.webm"),
     ]),
     Section("Responsive & Adaptive UI", [
-      Lecture("Module Introduction", "02:25 mins"),
-      Lecture("Dart Basics", "17:20 mins"),
-      Lecture("Dart Fundamentals", "11:10 mins"),
-      Lecture("Flutter App Basic", "07:40 mins"),
+      Lecture("Module Introduction", "02:25 mins","https://mazwai.com/videvo_files/video/free/2016-04/small_watermarked/the_valley-graham_uheslki_preview.webm"),
+      Lecture("Dart Basics", "17:20 mins","https://mazwai.com/videvo_files/video/free/2016-04/small_watermarked/the_valley-graham_uheslki_preview.webm"),
+      Lecture("Dart Fundamentals", "11:10 mins","https://mazwai.com/videvo_files/video/free/2016-04/small_watermarked/the_valley-graham_uheslki_preview.webm"),
+      Lecture("Flutter App Basic", "07:40 mins","https://mazwai.com/videvo_files/video/free/2016-04/small_watermarked/the_valley-graham_uheslki_preview.webm",),
     ]),
   ];
-
+  //"https://drive.google.com/uc?id=1ADhNyZHEh8DvrFpMNKvL5R-RvO9C4YSX"
+  //"https://drive.google.com/file/d/1ADhNyZHEh8DvrFpMNKvL5R-RvO9C4YSX/view?usp=drivesdk"
   //Course List
   static List<Course> courseList = [
     Course(

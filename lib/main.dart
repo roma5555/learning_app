@@ -1,6 +1,7 @@
 import 'package:e_learning_app/argument/checkout_argument.dart';
 import 'package:e_learning_app/argument/course_argument.dart';
 import 'package:e_learning_app/layout/courssses.dart';
+import 'package:e_learning_app/layout/tagroba.dart';
 
 import 'package:e_learning_app/screens/courses/my_courses_list.dart';
 import 'package:e_learning_app/screens/courses/whishlist_screen.dart';
@@ -17,12 +18,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'shared/preferences/shared_preferences.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 
 
 void main() async{
   // Ensure that bindings are initialized
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  if (Firebase.apps.isEmpty) {
+  await Firebase.initializeApp(
+      // options: FirebaseOptions(
+      //   apiKey: "AIzaSyAMQcqQ6d7fRMwgoSqb4HDZadHCZGgLSrY",  // استبدلي هذا بالقيمة الصحيحة من Firebase Console
+      //   appId: "1:915006759357:android:8d2a9f749976641ab232d4",  // استبدلي هذا بالقيمة الصحيحة من Firebase Console
+      //   messagingSenderId: "915006759357",  // استبدلي هذا بالقيمة الصحيحة من Firebase Console
+      //   projectId: "learning-app-311ea",  // هذا هو معرف مشروعك في Firebase
+      //   storageBucket: "gs://learning-app-311ea.appspot.com",
+      // ),
+      ); }
   // final FirestoreService _firestoreService = FirestoreService();
   // await _firestoreService.uploadCourses();
 
@@ -78,33 +89,33 @@ class MyApp extends StatelessWidget {
             useMaterial3: true,
           ),
           //taba3na elle taht we theme
-          // routes: {
-          //   RouteNames.intro: (context) => const IntroScreen(),
-          //   RouteNames.courseHome: (context) => const CourseHome(),
-          //   RouteNames.shoppingCart: (context) => const ShoppingCartScreen(),
-          //   RouteNames.myCourseList:(context) => const MyCoursesList(),
-          //   RouteNames.whishlist:(context) => const WhishlistScreen(),
-          //
-          //
-          //
-          //
-          //
-          // },
-          //   onGenerateRoute: (settings){
-          //   if(settings.name == RouteNames.courseDetails){
-          //     final args = settings.arguments as CourseArgument;
-          //     return MaterialPageRoute(builder: (context) => CourseDetails(course: args.course));
-          //   }else if(settings.name==RouteNames.checkout){
-          //       final args = settings.arguments as CheckoutArgument;
-          //       return MaterialPageRoute(builder: (context) => CheckoutScreen(courseList: args.courseList,totalPrice: args.totalPrice,));
-          //
-          //   }
-          //   },
+          routes: {
+            RouteNames.intro: (context) => const IntroScreen(),
+            RouteNames.courseHome: (context) => const CourseHome(),
+            RouteNames.shoppingCart: (context) => const ShoppingCartScreen(),
+            RouteNames.myCourseList:(context) => const MyCoursesList(),
+            RouteNames.whishlist:(context) => const WhishlistScreen(),
+
+
+
+
+
+          },
+            onGenerateRoute: (settings){
+            if(settings.name == RouteNames.courseDetails){
+              final args = settings.arguments as CourseArgument;
+              return MaterialPageRoute(builder: (context) => CourseDetails(course: args.course));
+            }else if(settings.name==RouteNames.checkout){
+                final args = settings.arguments as CheckoutArgument;
+                return MaterialPageRoute(builder: (context) => CheckoutScreen(courseList: args.courseList,totalPrice: args.totalPrice,));
+
+            }
+            },
 
 
 
             //de mesh taba3na
-          home: Courssses(),
+         // home: Courssses(),
         );
      // },
     ////);

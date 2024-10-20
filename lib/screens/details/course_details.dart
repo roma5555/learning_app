@@ -1,5 +1,7 @@
 import 'package:e_learning_app/argument/checkout_argument.dart';
 import 'package:e_learning_app/models/course.dart';
+import 'package:e_learning_app/models/lecture.dart';
+import 'package:e_learning_app/models/lectureVideo.dart';
 import 'package:e_learning_app/models/section.dart';
 import 'package:e_learning_app/screens/details/widget/favourite.dart';
 import 'package:e_learning_app/shared/components/constants.dart';
@@ -8,7 +10,6 @@ import 'package:e_learning_app/util/util.dart';
 import 'package:flutter/material.dart';
 import 'package:readmore/readmore.dart';
 import 'package:e_learning_app/data_provider/shopping_cart_data_provider.dart';
-
 class CourseDetails extends StatelessWidget {
   const CourseDetails({Key?key,required this.course}) : super(key:key);
   // ({super, required this.course.key});
@@ -269,15 +270,28 @@ class CourseDetails extends StatelessWidget {
         onTap: (){
 
         },
-        leading: const SizedBox() ,
-        title: Text(lecture.name),
-        subtitle: Row(
+         leading: const Icon(Icons.play_circle_outline),
+        title:Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+children: [
+        Text(lecture.name),
+         Row(
           children: [
             const Icon(Icons.access_time,size: 15,),
             const SizedBox(width: 10,),
 Text(lecture.duration,style: TextStyle(color: Colors.blueGrey,fontSize: 15),)
-            ],
+
+      ],),
+
+  Padding(
+    padding: const EdgeInsets.symmetric(vertical: 8.0),
+    child: LectureVideo(lecture.videoUrl),  // استدعاء مشغل الفيديو
+  ),
+
+          ],
         ),
+
+
       );
     }).toList(),);
   }
