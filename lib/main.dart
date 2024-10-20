@@ -1,5 +1,6 @@
 import 'package:e_learning_app/argument/checkout_argument.dart';
 import 'package:e_learning_app/argument/course_argument.dart';
+import 'package:e_learning_app/layout/courssses.dart';
 
 import 'package:e_learning_app/screens/courses/my_courses_list.dart';
 import 'package:e_learning_app/screens/courses/whishlist_screen.dart';
@@ -16,6 +17,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'shared/preferences/shared_preferences.dart';
+
+
 void main() async{
   // Ensure that bindings are initialized
   WidgetsFlutterBinding.ensureInitialized();
@@ -75,33 +78,33 @@ class MyApp extends StatelessWidget {
             useMaterial3: true,
           ),
           //taba3na elle taht we theme
-          routes: {
-            RouteNames.intro: (context) => const IntroScreen(),
-            RouteNames.courseHome: (context) => const CourseHome(),
-            RouteNames.shoppingCart: (context) => const ShoppingCartScreen(),
-            RouteNames.myCourseList:(context) => const MyCoursesList(),
-            RouteNames.whishlist:(context) => const WhishlistScreen(),
-
-
-
-
-
-          },
-            onGenerateRoute: (settings){
-            if(settings.name == RouteNames.courseDetails){
-              final args = settings.arguments as CourseArgument;
-              return MaterialPageRoute(builder: (context) => CourseDetails(course: args.course));
-            }else if(settings.name==RouteNames.checkout){
-                final args = settings.arguments as CheckoutArgument;
-                return MaterialPageRoute(builder: (context) => CheckoutScreen(courseList: args.courseList,totalPrice: args.totalPrice,));
-
-            }
-            },
+          // routes: {
+          //   RouteNames.intro: (context) => const IntroScreen(),
+          //   RouteNames.courseHome: (context) => const CourseHome(),
+          //   RouteNames.shoppingCart: (context) => const ShoppingCartScreen(),
+          //   RouteNames.myCourseList:(context) => const MyCoursesList(),
+          //   RouteNames.whishlist:(context) => const WhishlistScreen(),
+          //
+          //
+          //
+          //
+          //
+          // },
+          //   onGenerateRoute: (settings){
+          //   if(settings.name == RouteNames.courseDetails){
+          //     final args = settings.arguments as CourseArgument;
+          //     return MaterialPageRoute(builder: (context) => CourseDetails(course: args.course));
+          //   }else if(settings.name==RouteNames.checkout){
+          //       final args = settings.arguments as CheckoutArgument;
+          //       return MaterialPageRoute(builder: (context) => CheckoutScreen(courseList: args.courseList,totalPrice: args.totalPrice,));
+          //
+          //   }
+          //   },
 
 
 
             //de mesh taba3na
-         //// home: startWidget,
+          home: Courssses(),
         );
      // },
     ////);

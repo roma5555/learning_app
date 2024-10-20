@@ -41,6 +41,7 @@ dependencies:
   provider: ^6.1.2
   readmore: ^3.0.0
   csc_picker: ^0.2.7
+  firebase_storage: ^12.3.3
 
 
 
