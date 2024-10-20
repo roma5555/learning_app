@@ -4,9 +4,21 @@ import 'package:firebase_storage/firebase_storage.dart';
 
 
 
-
 class Courssses extends StatelessWidget {
+
+  final FirebaseStorage _storage = FirebaseStorage.instanceFor(
+    bucket: 'gs://learning-app-311ea.appspot.com',
+  );
+
+
+  //final FirebaseStorage _storage = FirebaseStorage.instance;
+ // Reference ref = _storage.refFromURL("gs://learning-app-311ea.appspot.com/path-to-file");
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
+
+  // This will be called inside a method, not directly in field initialization.
+  // Reference getStorageReference() {
+  //   return _storage.refFromURL("gs://learning-app-311ea.appspot.com/path-to-file");
+  // }
 
   Future<List<Map<String, dynamic>>> fetchCourses() async {
     QuerySnapshot snapshot = await _firestore.collection('courses').get();
